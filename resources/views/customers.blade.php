@@ -8,3 +8,5 @@
    Head Section to!
 @stop
 
+
+<?php echo $result;?>

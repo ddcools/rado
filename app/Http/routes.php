@@ -9,12 +9,16 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
-*/
+ */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 });
 
-Route::get('customers/', 'CustomerController@index');
+Route::get('customers', 'CustomerController@index');
 
 Route::post('customers', 'CustomerController@create');
+
+Route::get('/test', function () {
+	return View::make('test/testview');
+});
